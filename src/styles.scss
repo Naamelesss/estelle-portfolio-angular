@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+$gold-color: #E2BA49;
+$darker-gold-color: #AB8A2E;
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: black;
+    margin: 0;
+    font-size: 16px;
+}
+
+.text-gold {
+    color: $gold-color;
+    
+}
+// .text-gold:hover {
+//     color: darken($color: $gold-color, $amount: 20)
+// }
+
+.text-darker-gold {
+    color: $darker-gold-color;
+}
