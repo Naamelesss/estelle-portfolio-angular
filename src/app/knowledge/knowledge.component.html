@@ -1,0 +1,19 @@
+<main>
+    <section *ngFor="let element of portfolioKnowledge">
+        <div class="left_part">
+            <h2>
+                • {{element.title}} :
+            </h2>
+            <p *ngFor="let para of element.paragraphs">
+                ○ {{para.paragraph}}
+            </p>
+        </div>
+        <div class="acte_pdf">
+            <img *ngFor="let img of element.image" [src]="'assets/img/knowledge/' +  img.lien + '.jpg'" alt="">
+            <!-- <p *ngFor="let img of element.image">{{img.lien}}</p> -->
+        </div>
+        <!-- <div class="acte_pdf">
+            <object *ngFor="let img of element.image" type="application/pdf" [data]="img.lien"></object>
+        </div> -->
+    </section>
+</main>

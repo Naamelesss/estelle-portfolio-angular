@@ -1,3 +1,5 @@
+$gold-color: #E2BA49;
+
 main {
     height: calc(100vh - 80px);
     display: flex;
@@ -57,3 +59,37 @@ main {
         justify-content: space-evenly;
     }
 }
+
+
+.rs > a {
+    color: $gold-color;
+}
+.rs > a::after {
+    position: absolute;
+    // text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    
+    border-radius: 8px;
+    margin-top: 10px;
+
+    background: $gold-color;
+    color: white;
+}
+
+#phone:hover::after {
+    content: '07 83 47 25 47';
+    transform: translate(-25%);
+}
+#linkedin:hover::after {
+    content: 'Estelle Georges';
+    transform: translate(-30%);
+}
+#mail:hover::after {
+    content: 'estelle.georges@icloud.com';
+    transform: translate(-37.5%);
+}
+
+// BP : 1500px

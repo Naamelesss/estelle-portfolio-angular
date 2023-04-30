@@ -1,0 +1,21 @@
+<main>
+    <div class="separator"></div>
+    <nav>
+        <ul>
+            <li *ngFor="let element of portfolioCV"><a class="text-gold" [href]="'cv/#' + element.id">{{element.name}}</a></li>
+        </ul>
+    </nav>
+    <div class="separator"></div>
+    <section *ngFor="let element of portfolioCV">
+        <h2 [id]="element.id">
+           {{element.name}}
+        </h2>
+        <div class="container" *ngFor="let element2 of element.data">
+            <div class="left">
+                <p class="label">{{element2.label}}</p>
+                <p class="place">{{element2.place}}</p>
+            </div>
+            <p class="right date">{{element2.date}}</p>
+        </div>
+    </section>
+</main>

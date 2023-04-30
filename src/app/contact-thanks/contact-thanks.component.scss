@@ -1,0 +1,40 @@
+main {
+    height: 100vh;
+    margin-top: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2, a {
+        font-family: century-gothic, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.875rem;
+        color: white;
+    }
+    a {
+        background: black;
+        border: 1px #E2BA49 solid;
+        color: #E2BA49;
+        text-decoration: none;
+        border-radius: 8px;
+        padding: 5px 22px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: #AB8A2E;
+            color: white;
+        }
+
+        transition: all 0.4s;
+    }
+    svg {
+        width: 1.875rem;
+        height: 1.875rem;
+        margin-right: 22px;
+    }
+}

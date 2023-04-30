@@ -1,0 +1,78 @@
+main {
+    // background: yellow;
+    display: grid;
+    grid-template-columns: 140px repeat(12, 1fr) 140px;
+    gap: 16px;
+
+    margin-top: 120px;
+}
+
+* {
+    transition: all 0.4s;
+}
+
+form {
+    grid-column-start: 4;
+    grid-column-end: -4;
+    // background: wheat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .line {
+        display: flex;
+        width: 100%;
+        margin-bottom: 32px;
+
+        & > button {
+            font-family: century-gothic, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1.875rem;
+            color: #E2BA49;
+            background: black;
+            border: 1px #E2BA49 solid;
+            padding: 5px 22px;
+            border-radius: 8px;
+            margin: auto;
+
+            &:hover {
+                background: #AB8A2E;
+                color: white;
+            }
+        }
+    }
+}
+label {
+    font-size: 1.875rem;
+    display: none;
+    // display: block;
+    // position: relative;
+    // left: 100%;
+    // top: 18px;
+    // background: red;
+    // transform: translate(50px);
+    // padding-left: 50px;
+}
+input, textarea {
+    font-size: 1.875rem;
+    padding: 18px;
+
+    border-radius: 8px;
+    border: 1px solid #E2BA49;
+    background: black;
+    color: white;
+    font-family: century-gothic, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0 8px 0 8px;
+    flex: 1;
+
+    &:focus {
+        border: #AB8A2E 1px solid;
+        outline: none;
+    }
+}
