@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background: black;
+
+    // z-index: 2;
+}
+
+h1 {
+    font-family: classico-urw, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 6.25rem;
+    color: #E2BA49;
+    
+    // background: yellow;
+}
+
+img {
+    height: 50vh;
+}
+
+svg:hover {
+    cursor: pointer;
+}

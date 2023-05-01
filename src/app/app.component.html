@@ -1,2 +1,5 @@
 <app-desktop-navigation></app-desktop-navigation>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<div [@routeAnimations]="getRouteAnimationData()">
+    <router-outlet></router-outlet>
+</div>

@@ -5,10 +5,11 @@ import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { CvComponent } from './cv/cv.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactThanksComponent } from './contact-thanks/contact-thanks.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'accueil', component: HomeComponent},
+  {path: '', component: LandingPageComponent, data: { animation: 'landing' }},
+  {path: 'accueil', component: HomeComponent, data: { animation: 'portfolio' }},
   {path: 'savoir-faire', component: KnowledgeComponent},
   {path: 'cv', component: CvComponent},
   {path: 'contact', component: ContactComponent},
