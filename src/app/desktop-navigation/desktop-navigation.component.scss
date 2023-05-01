@@ -2,12 +2,20 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    // background-color: red;
+    // margin: 0;
 }
 ul {
     margin: 40px 0 0 0;
+    padding: 0;
+    // margin: 0;
 }
 li {
     display: inline;
+    // margin: 0;
+    // background-color: red;
+    text-align: center;
 }
 a {
     padding: 0 1.75rem 0 1.75rem;
@@ -21,4 +29,18 @@ a {
 
 .active {
     text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+    ul {
+        margin: 20px 0 0 0;
+    }
+}
+
+@media (max-width: 660px) {
+    li {
+        display: block;
+        // background: red;
+        // width: 100vw;
+    }
 }

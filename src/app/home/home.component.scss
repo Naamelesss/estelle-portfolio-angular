@@ -5,13 +5,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    // background: yellow;
 }
 
 .container {
     display: grid;
     grid-template-columns: 140px repeat(12, 1fr) 140px;
     gap: 16px;
-    grid-template-areas: ". . presentation presentation presentation presentation . . img-rs img-rs img-rs img-rs . .";
+    grid-template-areas: ". . presentation presentation presentation presentation presentation . img-rs img-rs img-rs img-rs . .";
 }
 
 .presentation {
@@ -29,17 +30,21 @@ main {
         font-weight: 700;
         font-style: normal;
         font-size: 3.75rem;
+        // background-color: red;
     }
     h2 p {
         font-family: "century-gothic", sans-serif;
         font-weight: 400;
         font-style: normal;
-
+    }
+    h2 {
         font-size: 1.375rem;
     }
     p {
         margin-top: 24px;
         font-size: 2.125rem;
+
+        line-height: 1.4em;
     }
 }
 
@@ -63,6 +68,8 @@ main {
 
 .rs > a {
     color: $gold-color;
+
+    // background: red;
 }
 .rs > a::after {
     position: absolute;
@@ -78,9 +85,14 @@ main {
     background: $gold-color;
     color: white;
 }
+// svg {
+//     width: 20px;
+//     height: 20px;
+//     // background: red;
+// }
 
 #phone:hover::after {
-    content: '07 83 47 25 47';
+    content: '06 52 97 73 60';
     transform: translate(-25%);
 }
 #linkedin:hover::after {
@@ -92,4 +104,80 @@ main {
     transform: translate(-37.5%);
 }
 
-// BP : 1500px
+@media (max-width: 2000px) {
+    .container {
+        grid-template-areas: ". presentation presentation presentation presentation presentation presentation . . img-rs img-rs img-rs img-rs .";
+    }
+}
+
+@media (max-width: 1400px) {
+    .presentation > article {
+        h1 {
+            font-size: 3.35rem;
+        }
+        h2 {
+            font-size: 0.975rem;
+        }
+        p {
+            font-size: 1.725rem;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .presentation > article {
+        h1 {
+            font-size: 3.0rem;
+        }
+        h2 {
+            font-size: 0.625rem;
+        }
+        p {
+            font-size: 1.375rem;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .presentation > article {
+        h1 {
+            font-size: 2.4rem;
+        }
+    }
+    svg {
+        width: 35px;
+        height: 35px;
+    }
+    #phone:hover::after {
+        transform: translate(-35%);
+    }
+    #linkedin:hover::after {
+        transform: translate(-36%);
+    }
+    #mail:hover::after {
+        transform: translate(-42%);
+    }
+}
+
+@media (max-width:1024px) and (orientation: portrait) {
+    main {
+        height: calc(100vh - 180px);
+    }
+    .container {
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img_rs {
+        img {
+            width: 50%;
+            margin: auto;
+            border-radius: 50%;
+        }
+    }
+    h1, h2, p {
+        text-align: center;
+    }
+}

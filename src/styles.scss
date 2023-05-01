@@ -12,6 +12,7 @@ html, body {
 
     &::-webkit-scrollbar {
         width: 8px;
+        height: 8px;
     }
     &::-webkit-scrollbar-track {
         background: black;
@@ -20,6 +21,10 @@ html, body {
         background: $gold-color;
         border-radius: 4px;
     }
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .text-gold {

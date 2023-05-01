@@ -1,15 +1,20 @@
 <main>
     <section *ngFor="let element of portfolioKnowledge">
         <div class="left_part">
-            <h2>
-                • {{element.title}} :
-            </h2>
-            <p *ngFor="let para of element.paragraphs">
-                ○ {{para.paragraph}}
-            </p>
+            <div class="title">
+                <h2>
+                    • {{element.title}} :
+                </h2>
+            </div>
+            <div class="paragraph">
+                <p *ngFor="let para of element.paragraphs">
+                    ○ {{para.paragraph}}
+                </p>
+            </div>
         </div>
         <div class="acte_pdf">
-            <img *ngFor="let img of element.image" [src]="'assets/img/knowledge/' +  img.lien + '.jpg'" alt="">
+            <img *ngFor="let img of element.image" [src]="'assets/img/knowledge/' +  img.lien + '.jpg'" alt="Document" (click)="viewImage(img.lien)">
+            <!-- <p>Click ici pour agrandire</p> -->
             <!-- <p *ngFor="let img of element.image">{{img.lien}}</p> -->
         </div>
         <!-- <div class="acte_pdf">
@@ -17,3 +22,6 @@
         </div> -->
     </section>
 </main>
+<div *ngIf="expandImgActive" class="expand_img_container" (click)="closeExpand()">
+    <img [src]="'assets/img/knowledge/' +  expandImgLink + '.jpg'" alt="Document aggrandi">
+</div>

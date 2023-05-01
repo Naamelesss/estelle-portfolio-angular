@@ -38,3 +38,29 @@ main {
         margin-right: 22px;
     }
 }
+
+@media (max-width: 530px) {
+    main {
+        h2, a {
+            font-size: 1.0rem;
+            // background-color: red;
+        }
+        svg {
+            width: 1.0rem;
+            height: 1.0rem;
+        }
+    }
+}
+
+@media (max-width: 280px) {
+    main {
+        h2, a {
+            font-size: 0.8rem;
+            // background-color: red;
+        }
+        svg {
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+    }
+}

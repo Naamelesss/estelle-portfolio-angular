@@ -49,6 +49,12 @@ export class PortfolioKnowledgeService {
                 }
             ],
             image: [
+                {
+                    lien: 'ds_cerfa_mbe'
+                },
+                {
+                    lien: 'ds_cerfa_m3'
+                }
             ]
         },
         {
@@ -62,6 +68,12 @@ export class PortfolioKnowledgeService {
                 }
             ],
             image: [
+                {
+                    lien: 'di_mainlevee'
+                },
+                {
+                    lien: 'di_procuration'
+                }
             ]
         }
     ]

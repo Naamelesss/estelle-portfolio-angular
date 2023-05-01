@@ -12,6 +12,7 @@ main {
 }
 
 form {
+    // background: red;
     grid-column-start: 4;
     grid-column-end: -4;
     // background: wheat;
@@ -41,6 +42,8 @@ form {
             &:hover {
                 background: #AB8A2E;
                 color: white;
+
+                cursor: pointer;
             }
         }
     }
@@ -74,5 +77,64 @@ input, textarea {
     &:focus {
         border: #AB8A2E 1px solid;
         outline: none;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background: black;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #E2BA49;
+        border-radius: 2px;
+    }
+    resize: none;
+}
+
+@media (max-width: 1440px) {
+    form {
+        // width: 80%;
+        .line {
+            // display: block;
+            flex-direction: column;
+            // margin-bottom: 18px;
+            // align-self: center;
+            // justify-self: center;
+            // background: red;
+            // width: 80%;
+            // margin: 0;
+
+            // margin: auto;
+            // margin: 8px;
+            // padding: 4px;
+
+            & > button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    input, textarea {
+        margin: 0;
+        padding: 18px;
+        width: calc(100% - 36px);
+    }
+}
+
+@media (max-width: 1040px) {
+    form {
+        grid-column-start: 2;
+        grid-column-end: -2;
+    }
+}
+
+@media (max-width: 720px) {
+    form {
+        grid-column-start: 1;
+        grid-column-end: -1;
     }
 }

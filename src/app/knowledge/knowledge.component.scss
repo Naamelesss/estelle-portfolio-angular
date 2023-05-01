@@ -2,6 +2,7 @@ section {
     margin-top: 120px;
     display: grid;
     grid-template-columns: 140px repeat(12, 1fr) 140px;
+    // grid-template-rows: 100px;
     gap: 16px;
 }
 
@@ -12,17 +13,38 @@ section {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 16px;
+
+    grid-template-rows: 1.875rem;
 }
 
-h2 {
+.title {
     margin: 0;
+    // padding: 0;
     grid-column-start: 1;
     grid-column-end: 7;
+
+    // height: 0;
+    // background: #E2BA;
 }
-p {
-    margin: 0;
+.paragraph {
+    // background-color: red;
+    // height: 0;
+    // margin-top: 2.875rem;
     grid-column-start: 2;
     grid-column-end: 7;
+    // top: 0;
+    // position: absolute;
+    // top: 1.875rem;
+    // top: -100px;
+    
+    margin: 0;
+
+    // grid-row-start: 1;
+    // grid-row-end: 2;
+
+    // display: flex;
+    // align-self: start;
+    // justify-self: start;
 }
 .acte_pdf {
     // display: inline-flex;
@@ -33,7 +55,7 @@ p {
 
     img {
         width: 25%;
-        height: 100%;
+        // height: 100%;
         // overflow: hidden;
         background: rgba($color: #000000, $alpha: 0.5);
 
@@ -41,10 +63,18 @@ p {
 
         &:hover {
             // height: 200%;
-            transform: translateX(-100%) translateY(100%) scale(3);
+            // transform: translateX(-100%) translateY(100%) scale(3);
             // position: relative;
             // right: 50vw;
+            transform: scale(1.05);
+            cursor: zoom-in;
         }
+
+        // img:hover::after {
+        //     content: "ss";
+        //     color: red;
+        //     font-size: 50px;
+        // }
     }
     // img:hover {
     //     // height: 200%;
@@ -58,4 +88,82 @@ h2, p {
     font-style: normal;
     color: #E2BA49;
     font-size: 1.875rem;
+
+    margin: 0;
+    // padding: 0;
+    // background-color: red;
+    // padding: 0;
+    // height: 10px;
+}
+
+.expand_img_container {
+    position: fixed;
+    // margin: auto;
+    // left: 0; 
+    // right: 0; 
+    top: 0;
+    // margin-left: auto; 
+    // margin-right: auto; 
+    // width: 800px; /* Need a specific value to work */
+    height: 100vh;
+    width: 100vw;
+    // background: rgba($color: #ee0a0a, $alpha: 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        // background: red;
+        height: 100%;
+        // border: #E2BA49 1px solid;
+    }
+
+    &:hover {
+        cursor: zoom-out;
+    }
+}
+
+@media (max-width: 1380px) {
+    // .left_part {
+    //     grid-column-start: 2;
+    //     grid-column-end: 9;
+    // }
+    
+    // .title {
+    //     grid-column-start: 1;
+    //     grid-column-end: 7;
+    // }
+    // .paragraph {
+    //     grid-column-start: 2;
+    //     grid-column-end: 7;
+    // }
+    // .acte_pdf {
+    //     grid-column-end: -2;
+    //     grid-column-start: 9;
+    // }
+    section {
+        grid-template-columns: 20px repeat(12, 1fr) 20px;
+    }
+    h2, p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 940px) {
+    h2, p {
+        font-size: 1.0rem;
+    }
+    .left_part {
+        grid-template-rows: 1.0rem;
+    }
+}
+
+@media (max-width: 650px) {
+    h2, p {
+        font-size: 0.7rem;
+    }
+    .left_part {
+        grid-template-rows: 0.7rem;
+    }
 }

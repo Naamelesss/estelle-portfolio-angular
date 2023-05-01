@@ -9,7 +9,8 @@ nav {
 }
 
 ul {
- margin: 10px 0 0 0;
+    padding: 0;
+    margin: 10px 0 0 0;
 }
 
 li {
@@ -94,3 +95,106 @@ section {
         }
     }
 }
+
+@media (max-width: 1300px) {
+    section {
+        .container {
+            .left {
+                grid-column-start: 2;
+                grid-column-end: 12;
+            }
+            .right {
+                grid-column-start: 12;
+                grid-column-end: 14;
+            }
+        }
+    }
+}
+
+@media (max-width: 1210px) {
+    a {
+        padding: 0 1.0rem 0 1.0rem;
+        font-size: 1.0rem;
+    }
+    section {
+        h2 {
+            font-size: 1.0rem;
+        }
+        .container {
+            .left {
+                // grid-column-start: 2;
+                // grid-column-end: 12;
+                .label {
+                    font-size: 1.0rem;
+                }
+                .place {
+                    font-size: 1.0rem;
+                }
+            }
+            .right {
+                // grid-column-start: 12;
+                // grid-column-end: 14;
+                font-size: 1.0rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    a {
+        padding: 0 0.8rem 0 0.8rem;
+        font-size: 0.8rem;
+    }
+    section {
+        h2 {
+            font-size: 0.8rem;
+        }
+        .container {
+            grid-template-columns: 20px repeat(12, 1fr) 20px;
+            .left {
+                // grid-column-start: 1;
+                // grid-column-end: 11;
+                .label {
+                    font-size: 0.8rem;
+                }
+                .place {
+                    font-size: 0.8rem;
+                }
+            }
+            .right {
+                // grid-column-start: 12;
+                // grid-column-end: 15;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    li {
+        display: block;
+    }
+    // a {
+    //     padding: 0 0.8rem 0 0.8rem;
+    //     font-size: 0.8rem;
+    // }
+    // section {
+    //     h2 {
+    //         font-size: 0.8rem;
+    //     }
+    //     .container {
+    //         .left {
+    //             .label {
+    //                 font-size: 0.8rem;
+    //             }
+    //             .place {
+    //                 font-size: 0.8rem;
+    //             }
+    //         }
+    //         .right {
+    //             font-size: 0.8rem;
+    //         }
+    //     }
+    // }
+}
+//1210

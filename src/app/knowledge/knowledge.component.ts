@@ -9,10 +9,26 @@ import { PortfolioKnowledgeService } from '../services/portfolioknowledge.servic
 })
 export class KnowledgeComponent implements OnInit {
   portfolioKnowledge!: PortfolioKnowledge[];
+  expandImgLink!: string;
+  expandImgActive!: boolean;
 
   constructor(private portfolioKnowledgeService: PortfolioKnowledgeService) {}
 
   ngOnInit(): void {
+    this.expandImgActive = false;
+    this.expandImgLink = '';
     this.portfolioKnowledge = this.portfolioKnowledgeService.getAllKnowledge();
+  }
+
+  viewImage(lien: string): void {
+    this.expandImgLink = lien;
+    this.expandImgActive = true;
+
+    // alert(this.expandImgLink);
+  }
+
+  closeExpand(): void {
+    this.expandImgActive = false;
+    this.expandImgLink = '';
   }
 }
